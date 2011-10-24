@@ -1,0 +1,46 @@
+Reunião data 27/09/11, a partir de 15:00
+
+
+Presentes na reunião: José carlos, Filipe Barbosa
+
+
+
+
+Antes de mais nada, gostaria de lembra-los da importancia da presença na reunião. 
+Se não for possivel estar presente, sempre olhem o que foi alterado dentro do Dropbox
+E principalmente, leiam essa ata, pois dentra dela podem contar informações referentes a você
+Tarefas em que o grupo depende de você.
+
+
+
+
+Tarefas realizadas pelos presentes:
+
+- Re-organização da estrutura de diretorios (Algumas pastas e arquivos remanejados)
+- Elaboração de um template do documento de visão
+- Elaboração de um template do documento de arquitetura
+
+- WBS atualizada
+  
+- Adição do artefato Plano de Gerencia de configuração (IMPORTANTE)
+
+
+
+
+
+
+Qualquer item presente em algum desses documentos que alguém por ventura quiser questionar, venha a min.
+
+Esses templates não são fixos e podem sofrer alterações, porém antes comunique.
+
+
+
+
+Tarefas a serem realizadas:
+
+-Temos que preencher esses artefatos. (Visão e arquitetura)
+
+-Revisar por completo o plano de projeto básico (Adicionar tudo que for refente ao gerenciamento)
+ 	Gerenciamento de tempo, custos, qualidade, escopo, integração e afins
+		Claro tudo aquilo que for necessario.
+
