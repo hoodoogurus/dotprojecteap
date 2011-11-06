@@ -1,0 +1,41 @@
+Reunião data 20/09/11, a partir de 14:30
+
+
+Estiveram presentes, José carlos, Guilherme Fay, Renan Costa, Filipe Barbosa
+
+
+
+Tarefas realizadas pelos presentes
+
+-Elaboração de nova WBS
+-Elaboração de novo Cronograma
+-Definição de artefatos
+-Divisão de tarefas
+-Revisão do GCS
+
+
+Tarefas a serem realizadas.
+
+
+* Henrique e Calixto
+
+-Preencher o documento "Especificação suplementar" (Esta dentro da pasta "Template")
+
+
+* Filipe 
+
+-Fazer Orçamento (Dentro do MS Project)
+
+
+
+* Rafael Queiroz e Vinicius
+
+- Diagrama de casos de uso e descrição de casos de uso
+
+
+
+OBS: Preencham o arquivo com o contato de vocês ! E de extrema importancia
+
+OBS2: Essas atividades não devem ser feitas excluisivamente pelas pessoas que foram designadas, 
+	todos podem e devem participar. Busquem ajuda sempre que necessario com outros integrantes, 
+	também para que o grupo inteiro esteje ciente.
