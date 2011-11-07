@@ -361,7 +361,11 @@ printf('%.1f%%', $obj->project_percent_complete); ?></td>
 		<tr>
 			<td align="right" nowrap><?php echo $AppUI->_('Project Hours'); ?>:</td>
 			<td class="hilite" width="100%"><?php echo $total_project_hours ?></td>
-		</tr>				
+		</tr>		
+        <tr>
+			<td align="right" nowrap><?php echo $AppUI->_('EAP'); ?>:</td>
+			<td class="hilite" width="100%"><?php echo $total_project_hours ?></td>
+		</tr>			
 		<?php
 $q->addTable('departments', 'a');
 $q->addTable('project_departments', 'b');
@@ -468,6 +472,11 @@ if (getPermission('files', 'access')) {
 	$tabBox->add(DP_BASE_DIR.'/modules/projects/vw_files', 'Files');
 }
 */
+// Modificado para teste.
+if (getPermission('forums', 'access')) {
+	$tabBox->add(DP_BASE_DIR.'/modules/projects/vw_eap', 'EAP');
+}
+//---------------------------------------------------------------------
 if ($canAccessTask) {
 	$tabBox->add(DP_BASE_DIR.'/modules/tasks/viewgantt', 'Gantt Chart');
 	if ($canAccessTaskLog) {
