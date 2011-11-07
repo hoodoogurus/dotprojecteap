@@ -2,3 +2,5 @@ http://www.redmine.org/projects/redmine/wiki/HowTos
 http://www.redmine.org/projects/redmine/wiki/HowTo_Install_Redmine_in_a_sub-URI_on_Windows_with_Apache
 http://blog.adsystems.com.br/2008/10/11/redmine-%E2%80%93-tutorial-de-instalacao-no-windows/
 http://ruby-br.org/?p=114
+http://rubyinstaller.org/downloads
+https://github.com/oneclick/rubyinstaller/wiki/Development-kit
