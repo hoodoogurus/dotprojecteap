@@ -1,0 +1,107 @@
+Changes for REDIPS.drag library
+
+2.7.1
+- table_top() function improved (used indexOf instead of idx property)
+- tables.idx property reused for sorting tables to original order
+- save_content() fixed - function first sorts tables array to original order using sort function
+- bug in save_content() fixed thanks to Harrison
+- enabled basic select inside drag region for IE browser
+- div_drag.onselectstart moved from init() to handler_onmousedown()
+- in handler_onmouseup() detached div_drag.onselectstart handler
+
+2.7.0
+- added support for fixed table or table container - position:fixed 
+- added "position" variable in handler_onmousedown() - needed for exclusion "scroll offset" if table or table container box has position fixed
+- box_offset() and calculate_cells() modification - added local variable "position"
+- local variable "position" added to enable_drag() function
+- added table_top() function to pick up "tables" array member to the top (in a moment when DIV element is clicked)
+- added example 10 (Sticky tables)
+
+2.6.3
+- if user has used a mouse event to increase the dimensions of the table - call calculate_cells() in handler_onmousedown, thanks to Mark Jacobs
+
+2.6.2
+- custom element properties renamed from "enabled" and "container" to "redips_enabled" and "redips_container"
+- added example9 (Single and switching mode)
+
+2.6.1
+- added public property REDIPS.drag.border (style for enabled element) - default is 'solid'
+- fixed "enabled" property for DIV elements
+
+2.6.0
+- enabled existence more than 1 DIV container
+- added example0 (Minimal steps)
+- added example8 (Tables in separated DIV containers)
+- main DIV container could have any id (it should'n be id="drag")
+- new private method init_tables() 
+- code cleaning
+- fixing example3 - School timetable (set reference to the DIV container in cloned elements)
+
+2.5.0
+- added myhandler_changed() - called after target cell changes
+- added public object current_cell - can be used in myhandler_changed()
+- added public object previous_cell - can be used in myhandler_changed()
+- added public method move_object()
+- obj_new_div exposed as private variable
+- obj_new_offset new private variable
+- private method relocate_object() not needed - deleted
+- private method in_scrollable() not needed - deleted
+- private parameters mouseX & mouseY not needed - deleted
+- save_content() method now returns content from all tables if input parameter is undefined
+- style definition "position: relative" for drag element is not needed  
+
+2.3.2
+- added example with scrollable and fixed DIV containers
+
+2.3.1
+- fixed issue with nested DIVS in case of "switch" drop option, thanks to Doony
+
+2.3.0
+- added "overwrite" drop option
+
+2.2.2
+- examples are modified with "body{margin:0px;}" due to wrong offset calculation in IE6 / IE7
+
+2.2.1
+- fixed zIndex for cloned objects
+
+2.2.0
+- added property "only" to enable defined DIV elements for marked table cell with class name 'only'
+- properties "mark_cname", "marked_cell" and "marked_exception" replaced with object "mark" 
+
+2.1.1
+- enabled textarea to be editable inside a dragable div
+- fixed marked_cell property
+
+2.1.0
+- scrollable_container() renamed to in_scrollable()
+- added sca[] - scrollable container areas
+- box_offset() now accepts and "type" parameter to exclude scrollLeft / scrollTop from calculation
+- fixed autoscroll bug (autoscroll didn't stop after releasing mouse button during the scrolling)
+- created "edge" private object
+- removed autoscrollX_flag and autoscrollY_flag global variables (edge.flag.x and edge.flag.y used instead)
+- added autoscrolling for div containers
+
+2.0.0
+- document.selection.clear() added in init() to prevent text selection for IE8 in case when leftmouse button was clicked and CTRL key was pressed
+- box_offset() now considers scrollTop value of elements "above" table
+ 	* element should have something other than default static in "position" style - see example5
+ 	* if not, offsetParent will be NULL and box_offset() will not calculate scroll value
+ - added get_style() function
+ - added setCapture / releaseCapture to allow dragging outside the window for the IE family
+ - added scrollable_container() function
+ - fixed bug for the first column in set_trc()
+ 	* before:
+ 	if (currentCell[3] <= evt.clientX && evt.clientX < currentCell[1])
+ 	* after:
+ 	if (currentCell[3] <= evt.clientX && evt.clientX <= currentCell[1])
+ 
+1.9.8
+- enable/disable single DIV dragging (enable_drag property)
+
+1.9.7
+- new feature "clone_ctrlKey" - if true elements could be cloned with CTRL key
+
+1.9.6
+- fixing save_content()
+- fixing event handler calling
