@@ -1,4 +1,4 @@
-<?php
+<?php /* PROJECTS $Id: view.php 6048 2010-10-06 10:01:39Z ajdonnison $ */
 if (!defined('DP_BASE_DIR')) {
 	die('You should not access this file directly.');
 }
