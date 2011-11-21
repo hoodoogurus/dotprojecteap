@@ -92,7 +92,7 @@ REDIPS.drag = (function () {
 		border_disabled = 'dotted',	// (string) border style for disabled element
 		trash = 'trash',			// (string) cell class name where draggable element will be destroyed
 		trash_ask = true,			// (boolean) confirm object deletion (ask a question "Are you sure?" before delete)
-		drop_option = 'multiple',	// (string) drop_option has the following options: multiple, single, switch, switching and overwrite
+		drop_option = 'single',	// (string) drop_option has the following options: multiple, single, switch, switching and overwrite
 		delete_cloned = true,		// (boolean) delete cloned div if the cloned div is dragged outside of any table
 		source_cell = null,			// (object) source table cell (defined in onmousedown and in onmouseup)
 		current_cell = null,		// (object) current table cell (defined in onmousemove)
@@ -1244,7 +1244,7 @@ REDIPS.drag = (function () {
 	trash_delete = function () {
 		var div_text = 'element',	// div content (inner text)
 			border;					// border color (green or blue)
-		// find the border color of DIV element (t1 - green, t2 - blue, t3 - orange)
+		// find the border color of DIV element (t1 - green, t2 - blue, t3 - blue)
 		if (obj.className.indexOf('t1') > 0) {
 			border = 'green';
 		}
@@ -1252,7 +1252,7 @@ REDIPS.drag = (function () {
 			border = 'blue';
 		}
 		else {
-			border = 'orange';
+			border = 'azul';
 		}
 		// set div text (cross browser)
 		if (obj.getElementsByTagName('INPUT').length || obj.getElementsByTagName('SELECT').length) {
@@ -1262,7 +1262,7 @@ REDIPS.drag = (function () {
 			div_text = '"' + (obj.innerText || obj.textContent) + '"';
 		}
 		// ask if user is sure
-		if (confirm('Apagar ' + div_text + ' (' + border + ') da\n tabela ' + table_source + ', linha ' + row_source + ' e coluna ' + cell_source + '?')) {
+		if (confirm('Apagar ' + div_text + ' (' + border + ') da linha ' + row_source + ' e coluna ' + cell_source + '?')) {
 			// yes, user is sure only call myhandler_deleted function
 			REDIPS.drag.myhandler_deleted();
 			// if object is cloned, update climit1_X or climit2_X classname
