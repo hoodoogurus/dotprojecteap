@@ -28,15 +28,13 @@
 				rd.myhandler_cloned     = function () {
 					// display message
 					document.getElementById('message').innerHTML = 'Duplicado';
-					// append 'd' to the element text (Clone -> Cloned)
-					rd.obj.innerHTML += '';
 				}
 				rd.myhandler_changed    = function () {
-					// define current row and current cell
+					// define linha e coluna atual
 					var ri = REDIPS.drag.current_cell.parentNode.rowIndex,
 						ci = REDIPS.drag.current_cell.cellIndex;
-					// display current row and current cell
-					document.getElementById('message').innerHTML = 'Changed: ' + ri + ' ' + ci;
+					// mostra a linha e a coluna atual
+					document.getElementById('message').innerHTML = 'Modificado: ' + ri + ' ' + ci;
 				}
 			}
 			// toggles trash_ask parameter defined at the top
@@ -79,14 +77,14 @@
         <table border="0" align="center" cellpadding="2" cellspacing="2">
   <tr>
     <td width="140" valign="middle"><div id="d1" class="drag t3 clone">
-      <textarea cols="30" rows="2" style="width: 115px; height: 30px; text-align:center"></textarea>
+      <textarea cols="30" rows="2" style="width: 125px; height: 30px; text-align:center"></textarea>
     </div></td>
-    <td width="140" align="center" valign="middle" class="mark" id="message" title="Voc&ecirc; N&atilde;o Pode Arrastar Para Aqui"><i>Status</i></td>
+    <td width="140" align="middle" valign="middle" class="mark" id="message" title="Voc&ecirc; N&atilde;o Pode Arrastar Para Aqui"><i>Status</i></td>
     <td width="140" valign="middle" class="trash" title="Trash">Lixeira</td>
-    <td width="140" valign="middle"><div><span class="message_line"><input type="button" value="Save" class="button" onclick="save()" title="Send content to the server"/></span></div></td>
+    <td width="140" valign="middle"><div><span class="message_line"><input type="button" value="Save" class="button" onclick="save()" title="Salvar"/></span></div></td>
 </tr></table>
 
-		  <table id="table1">
+		  <table id="table1" >
         <colgroup><col width="100"/><col width="100"/><col width="100"/><col width="100"/><col width="100"/></colgroup>
 				<tr>
 					<td colspan="5" class="mark">Nome do Projeto</td>
@@ -128,14 +126,8 @@
 					<!-- <td><div id="d8" class="drag t1"><img id="smile_img" src="/wp-includes/images/smilies/icon_smile.gif"/></div></td> -->
 				</tr>
 		  </table>
-	    <div><input type="radio" name="drop_option" class="checkbox" onclick="set_drop_option(this)" value="multiple" title="Enable dropping to already taken table cells" checked="true"/><span class="message_line">Enable dropping to already taken table cells</span></div>
-			<div><input type="radio" name="drop_option" class="checkbox" onclick="set_drop_option(this)" value="single" title="Disable dropping to already taken table cells"/><span class="message_line">Disable dropping to already taken table cells</span></div>
-			<div><input type="radio" name="drop_option" class="checkbox" onclick="set_drop_option(this)" value="switch" title="Switch content"/><span class="message_line">Switch content</span></div>
-			<div><input type="radio" name="drop_option" class="checkbox" onclick="set_drop_option(this)" value="switching" title="Switching content continuously"/><span class="message_line">Switching content continuously</span></div>
-			<div><input type="radio" name="drop_option" class="checkbox" onclick="set_drop_option(this)" value="overwrite" title="Overwrite content"/><span class="message_line">Overwrite content</span></div>
-			<div><input type="checkbox" class="checkbox" onclick="toggle_delete_cloned(this)" title="Remove cloned object if dragged outside of any table" checked="true"/><span class="message_line">Remove cloned object if dragged outside of any table</span></div>
-			<div><input type="checkbox" class="checkbox" onclick="toggle_confirm(this)" title="Confirm before delete object" checked="true"/><span class="message_line">Confirm before delete object</span></div>
-			<div><input type="checkbox" class="checkbox" onclick="toggle_dragging(this)" title="Enable dragging" checked="true"/><span class="message_line">Enable dragging</span></div>			
+		 <div><input type="checkbox" class="checkbox" onclick="toggle_confirm(this)" title="Confirmar antes de excluir pacote de trabalho" checked="true"/><span class="message_line">Confirmar antes de excluir objeto</span></div>
+		
 	</div>
 	</body>
 </html>
