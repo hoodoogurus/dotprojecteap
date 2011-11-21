@@ -1,3 +1,16 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+		<script type="text/javascript">
+		<!--
+			var redips_url = '/javascript/drag-and-drop-table-row/';
+		-->
+		</script>
+		<script type="text/javascript" src="header.js"></script>
+		<script type="text/javascript" src="redips-drag-min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>	
 <?php 
 if (!defined('DP_BASE_DIR')) {
   die('You should not access this file directly.');
@@ -36,6 +49,7 @@ while ($row = db_fetch_assoc($rc)) { $cont = $cont+1?>
 	<td></td>
 	<td colspan=3><?php echo $row["forum_description"];?></td>
 </tr>
+
 <?php }
 $q->clear();
 ?>
@@ -79,13 +93,89 @@ $q->exec();
 $q->clear();
 ?>
 
-
-
 </table>
-
-<form method="get" action="./tratarBotoesPHP.php">
-<input type="hidden" name="m" value="forums" />
-<input type="hidden" name="a" value="addedit" />
-<input type="hidden" name="forum_project" value="<?php echo $project_id; ?>" />
-<input type="submit" value="<?php echo $AppUI->_('new forum'); ?>" class="button" />
-</form>
+		<div id="drag">
+			<table id="tbl1">
+				<colgroup>
+					<col width="30"/>
+					<col width="100"/>
+					<col width="100"/>
+					<col width="100"/>
+					<col width="100"/>
+					<col width="100"/>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th colspan="6" class="mark">Table 1</th>
+					</tr>
+					<tr class="rd">
+						<td class="rowhandler"><div class="drag row"></div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="rl">
+						<td class="rowhandler"><div class="drag row"></div></td>
+						<td></td>
+						<td></td>
+						<td class="cdark"><div class="drag orange">drop</div></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="rl">
+						<td class="rowhandler"><div class="drag row"></div></td>
+						<td></td>
+						<td class="cdark"><div class="drag blue">and</div></td>
+						<td></td>
+						<td class="cdark"><div class="drag blue">table</div></td>
+						<td></td>
+					</tr>
+					<tr class="rl">
+						<td class="rowhandler"><div class="drag row"></div></td>
+						<td class="cdark"><div class="drag orange">Drag</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="cdark"><div class="drag orange">rows</div></td>
+					</tr>
+					<tr class="rd">
+						<td class="rowhandler"><div class="drag row"></div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="6" class="mark"><span id="msg">Message line</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="tbl2">
+				<colgroup>
+					<col width="30"/>
+					<col width="100"/>
+					<col width="100"/>
+					<col width="100"/>
+					<col width="100"/>
+					<col width="100"/>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th colspan="6" class="mark">Table 2</th>
+					</tr>
+					<tr class="rd">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
