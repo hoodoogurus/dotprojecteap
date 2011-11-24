@@ -1,4 +1,4 @@
-<?php
+<?php /* PROJECTS $Id: view.php 6048 2010-10-06 10:01:39Z ajdonnison $ */
 if (!defined('DP_BASE_DIR')) {
 	die('You should not access this file directly.');
 }
@@ -476,6 +476,12 @@ if (getPermission('files', 'access')) {
 if (getPermission('forums', 'access')) {
 	$tabBox->add(DP_BASE_DIR.'/modules/projects/vw_eap', 'EAP');
 }
+if (getPermission('forums', 'access')) {
+	$tabBox->add(DP_BASE_DIR.'/tests/test_eap', 'Teste EAP');
+}
+/*if (getPermission('forums', 'access')) {
+	$tabBox->add(DP_BASE_DIR.'/modules/projects/tratarBotoesPHP', 'Forums');
+}*/
 //---------------------------------------------------------------------
 if ($canAccessTask) {
 	$tabBox->add(DP_BASE_DIR.'/modules/tasks/viewgantt', 'Gantt Chart');
