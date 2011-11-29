@@ -1,0 +1,18 @@
+<IfModule !mod_proxy.c>
+    LoadModule proxy_module modules/mod_proxy.so
+</IfModule>
+<IfModule !mod_proxy_http.c>
+    LoadModule proxy_http_module modules/mod_proxy_http.so
+</IfModule>
+<IfModule !mod_proxy_balancer.c>
+    LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+</IfModule>
+
+ProxyPass /redmine balancer://redmine_cluster
+ProxyPassReverse /redmine balancer://redmine_cluster
+
+<Proxy balancer://redmine_cluster>
+    BalancerMember http://127.0.0.1:3001
+    BalancerMember http://127.0.0.1:3002
+    BalancerMember http://127.0.0.1:3003
+</Proxy>

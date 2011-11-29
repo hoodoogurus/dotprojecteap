@@ -1,0 +1,42 @@
+// Base do Documento: http://www.redmine.org/projects/redmine/wiki/HowTo_Install_Redmine_in_a_sub-URI_on_Windows_with_Apache
+// Verificação de instalação do Rubi193
+> ruby -v
+> gem -v
+-------------------------------------------------------------------------------------------
+// Instalação: Parte 1
+> gem install rake
+> gem install rails -v=2.3.5
+> gem install -v=0.4.2 i18n
+> gem install mongrel
+> gem install mysql
+-------------------------------------------------------------------------------------------
+// Instalação: Parte 2 - Depois de Mongrel + win32
+// Mover para C:/
+//Instalar o Development KIt no C://DevelopmetKit
+> ruby dk.rb init
+> ruby dk.rb review
+> ruby dk.rb instal
+> gem install rdiscount --platform=ruby.
+> gem install mongrel_service
+-------------------------------------------------------------------------------------------
+// Instalação: Parte 3 - Redmine
+// Extrair o Redmine no C:/
+// No MySQL Workbench
+> create database redmine character set utf8;
+> create user 'redmineUser'@'localhost' identified by 'myPassword';
+> grant all privileges on redmine.* to 'redmineUser'@'localhost'; 
+//Copy C:\webserver\Redmine\config\database.yml.example to C:\webserver\Redmine\config\database.yml
+//Edit C:\webserver\Redmine\config\database.yml file to configure your database settings for "production" environment. It should look like this:
+// Criando tabelas
+> cd C:\Redmine
+> set RAILS_ENV=production
+> rake generate_session_store
+> rake db:migrate
+> rake redmine:load_default_data
+// Editar: C:\Redmine\config\environment.rb
+// Acrescentar no final-> Redmine::Utils::relative_url_root = "/redmine" 
+--------------------------------------------------------------------------------------------
+// Configurando os serviços do windows
+> mongrel_rails service::install -N mongrel_redmine_3001 -D "Mongrel serving Redmine on 3001" -p 3001 -e production -c C:\webserver\Redmine
+> mongrel_rails service::install -N mongrel_redmine_3002 -D "Mongrel serving Redmine on 3002" -p 3002 -e production -c C:\webserver\Redmine
+> mongrel_rails service::install -N mongrel_redmine_3003 -D "Mongrel serving Redmine on 3003" -p 3003 -e production -c C:\webserver\Redmine
