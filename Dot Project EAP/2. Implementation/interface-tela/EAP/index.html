@@ -73,60 +73,76 @@
 	<body>
 		<!-- tables inside this DIV could have draggable content -->
 
-		<div id="drag">
-        <table border="0" align="center" cellpadding="2" cellspacing="2">
+	<div id="drag">
+  <div><input type="checkbox" class="checkbox" onclick="toggle_confirm(this)" title="Confirmar antes de excluir pacote de trabalho" checked="true"/><span class="message_line">Confirmar antes de excluir objeto</span></div>
+      <table border="0" align="center" cellpadding="2" cellspacing="2">
   <tr>
     <td width="140" valign="middle"><div id="d1" class="drag t3 clone">
-      <textarea cols="30" rows="2" style="width: 125px; height: 30px; text-align:center"></textarea>
+      <textarea cols="30" rows="2" style="width: 130px; height: 30px; text-align:center; max-width:130px; max-height:30px;"></textarea>
     </div></td>
     <td width="140" align="middle" valign="middle" class="mark" id="message" title="Voc&ecirc; N&atilde;o Pode Arrastar Para Aqui"><i>Status</i></td>
     <td width="140" valign="middle" class="trash" title="Trash">Lixeira</td>
-    <td width="140" valign="middle"><div><span class="message_line"><input type="button" value="Save" class="button" onclick="save()" title="Salvar"/></span></div></td>
+    <td width="140" valign="middle" class="mark"><div><span class="message_line"><input type="button" value="Save" class="button" onclick="save()" title="Salvar"/></span></div></td>
 </tr></table>
 
-		  <table id="table1" >
+	  <table id="table1" >
         <colgroup><col width="100"/><col width="100"/><col width="100"/><col width="100"/><col width="100"/></colgroup>
-				<tr>
-					<td colspan="5" class="mark">Nome do Projeto</td>
-				</tr>
-				<tr style="background-color: #eee" class="rd">
-					<td height="34"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-			</tr>
-				<tr class="rd"> 
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr style="background-color: #eee" class="rd">
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr class="rd">
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr style="background-color: #eee" class="rd">
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<!-- <td><div id="d8" class="drag t1"><img id="smile_img" src="/wp-includes/images/smilies/icon_smile.gif"/></div></td> -->
-				</tr>
-		  </table>
-		 <div><input type="checkbox" class="checkbox" onclick="toggle_confirm(this)" title="Confirmar antes de excluir pacote de trabalho" checked="true"/><span class="message_line">Confirmar antes de excluir objeto</span></div>
+			<tr>
+				<td colspan="3" bgcolor="#FFFFFF" class="mark">&nbsp;</td>
+					<td colspan="2" bgcolor="#FFFFFF" class="mark">&nbsp;</td>
+					<td class="mark">Nome do Projeto</td>
+					<td colspan="2" bgcolor="#FFFFFF" class="mark">&nbsp;</td>
+					<td colspan="2" bgcolor="#FFFFFF" class="mark">&nbsp;</td>
+		    </tr>
+			<tr style="background-color: #eee" class="rd">
+				<td height="34" colspan="3"></td>
+				<td colspan="2"></td>
+				<td bgcolor="#FFFFFF" class="mark"></td>
+				<td colspan="2"></td>
+				<td colspan="2"></td>
+		</tr>
+        
+			<tr class="rd"> 
+				<td class="mark" width="20"></td>
+				<td colspan="2"></td>
+				<td class="mark" width="20"></td>
+				<td></td>
+				<td bgcolor="#FFFFFF" class="mark"></td>
+				<td class="mark" width="20"></td>
+				<td></td>
+				<td class="mark" width="20"></td>
+				<td></td>
+		    </tr>
+			<tr style="background-color: #eee" class="rd">
+			
+				<td></td>
+                <td></td>
+                <td></td>
+				<td colspan="2"></td>
+				<td bgcolor="#FFFFFF" class="mark"></td>
+				<td colspan="2"></td>
+				<td colspan="2"></td>
+		    </tr>
+			<tr class="rd">
+				<td></td>
+				<td colspan="2"></td>
+                </td>
+				<td colspan="2"></td>
+				<td bgcolor="#FFFFFF" class="mark"></td>
+				<td colspan="2"></td>
+				<td colspan="2"></td>
+		    </tr>
+			<tr style="background-color: #eee" class="rd">
+				<td colspan="2"></td>
+				<td></td>
+				<td colspan="2"></td>
+				<td bgcolor="#FFFFFF" class="mark"></td>
+				<td colspan="2"></td>
+				<td colspan="2"></td>
+				<!-- <td><div id="d8" class="drag t1"><img id="smile_img" src="/wp-includes/images/smilies/icon_smile.gif"/></div></td> -->
+		    </tr>
+      </table>
+		
 		
 	</div>
 	</body>
